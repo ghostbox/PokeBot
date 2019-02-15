@@ -1,6 +1,11 @@
 # Welcome to PokeBot
 
-This is a very simple ppo Bot which is currently in development and will be ready shortly.
+This is a very simple ppo Bot which is currently in Beta if you find any errors report it Thanks.
+
+# Download the bot
+https://github.com/HypedNinja/PPOKeBot/releases
+
+
 
 # How it will work
 Here are some features this bot will have
@@ -17,7 +22,7 @@ Here are some features this bot will have
 
 
 
-## For more details see My youtube video
+## For more details see My youtube video Which will be avaliable soon
 
 
 
