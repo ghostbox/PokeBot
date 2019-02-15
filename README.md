@@ -1,1 +1,0 @@
-#Pokemonplanet bot by Hypedinja
