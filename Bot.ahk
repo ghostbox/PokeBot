@@ -1,4 +1,8 @@
-﻿/*
+﻿Global Version :=0.2
+CheckForUpdate("https://raw.githubusercontent.com/HypedNinja/PokeBot/master/Bot.ahk")
+
+/*
+
 Written BY:
          Scaramental
 
@@ -25,7 +29,9 @@ Add features to make bot better
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
 #Persistent
+CheckForUpdate("https://raw.githubusercontent.com/HypedNinja/PokeBot/master/Bot.ahk")
 
 F1::
     pause_state = 0
