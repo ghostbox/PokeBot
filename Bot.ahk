@@ -1,4 +1,4 @@
-﻿Global Version :=0.1
+﻿Global Version :=0.1;test
 
 
 CheckForUpdate(ScriptURL) {
