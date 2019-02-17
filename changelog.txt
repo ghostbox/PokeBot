@@ -1,0 +1,11 @@
+1) Added a new feature when you run the bot it will update the bot to the latest script
+   In order for this to work  you have to download autohotkey.
+
+2)Removes pokeball icon in MsgBox which was causing errors
+
+3)Removed mouse move and mouse click and replaced it with keyboard 1
+
+4)Now you will have to press f1 to open up bot functions and start it
+
+
+

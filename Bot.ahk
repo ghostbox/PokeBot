@@ -1,10 +1,11 @@
-﻿Global Version :=0.1
-
-
+﻿Global Version :=0.2 
+ 
+;This script is updated version
 CheckForUpdate(ScriptURL) {
     Script := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     Script.Open("GET", ScriptURL, false)
     Script.Send()
+    Script.ResponseText := SubStr(Script.ResponseText, 2)
     RegexMatch(StrSplit(Script.ResponseText, "`n")[1], "m):=\s*\K.*?$", NewVersion)
     if (NewVersion > Version) {
         f := FileOpen(A_ScriptFullPath, "rw")
@@ -38,6 +39,7 @@ Add features to make bot better
 ;--------------------------------------------------
 ;--------------------------------------------------
 ;--------------------------------------------------
+#SingleInstance force
  #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
@@ -91,7 +93,7 @@ If (pause_state = 1) {
 } } 
 
 
-
+;
 
 
 
