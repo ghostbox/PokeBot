@@ -1,4 +1,6 @@
-﻿Global Version :=0.1
+﻿Global Version :=0.2 
+ 
+ ;This script is updated version
 
 
 CheckForUpdate(ScriptURL) {
