@@ -1,4 +1,4 @@
-﻿Global Version :=0.2 
+Global Version :=0.2 
  
  ;This script is updated version
 
