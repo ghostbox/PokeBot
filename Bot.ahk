@@ -1,4 +1,6 @@
 ﻿Global Version :=0.2 
+
+
  
 ;This script is updated version
 CheckForUpdate(ScriptURL) {
@@ -90,11 +92,7 @@ send, {1}
 send, {1}
 If (pause_state = 1) {
     break
-} } 
-
-
-;
-
+} }
 
 
 

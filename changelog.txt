@@ -1,3 +1,5 @@
+      17/02/2019
+
 1) Added a new feature when you run the bot it will update the bot to the latest script
    In order for this to work  you have to download autohotkey.
 
