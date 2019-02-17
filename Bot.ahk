@@ -1,7 +1,6 @@
 Global Version :=0.2 
  
-;This script is updated version  8
-
+;This script is updated version
 CheckForUpdate(ScriptURL) {
     Script := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     Script.Open("GET", ScriptURL, false)
