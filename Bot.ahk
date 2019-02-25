@@ -1,4 +1,4 @@
-﻿Global Version :=0.2 
+Global Version :=0.3 ;In beta
 
 
  
@@ -24,7 +24,7 @@ Written BY:
 
 DateStarted:14/02/19
 
-DateOfLastEdit:3:46 PM 16/02/201914/02/19
+DateOfLastEdit:3:46 PM 16/02/2019/02/19
 
                 Description:A simple pokemon planet bot Which will play and grind for you
 */
@@ -43,7 +43,7 @@ Add features to make bot better
 ;--------------------------------------------------
 #SingleInstance force
  #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -52,22 +52,34 @@ CheckForUpdate("https://raw.githubusercontent.com/HypedNinja/PokeBot/master/Bot.
 
 F1::
     pause_state = 0
-    MsgBox, 3, Bot, PokeBot`, So you want to active the bot
-    IfMsgBox, yes
-        gosub, your_action
-        return
-    IfMsgBox, No
-        return
-    IfMsgBox, Cancel
-        return
+    OnMessage(0x44, "OnMsgBox")
+MsgBox 0x84, PokeBot, Would you like to active the bot
+OnMessage(0x44, "")
 
-^p::
+IfMsgBox Yes, {
+
+} Else IfMsgBox No, {
+
+}
+
+OnMsgBox() {
+    DetectHiddenWindows, On
+    Process, Exist
+    If (WinExist("ahk_class #32770 ahk_pid " . ErrorLevel)) {
+        hIcon := LoadPicture("C:\Users\Dk\Downloads\favicon (1).ico", "w32 Icon1", _)
+        SendMessage 0x172, 1, %hIcon%, Static1 ; STM_SETIMAGE
+    }
+}
+   IfMsgBox Yes 
+   {
+   ^p::
     pause_state = 1
     return
 
 your_action:
 Loop
 {
+    
 Send, {left down}
 Sleep 750
 Send, {left up}
@@ -94,7 +106,16 @@ If (pause_state = 1) {
     break
 } }
 
+   }
+   
+   IfMsgBox no
+    ExitApp
+    
 
 
 
+
+/*
+Bot will need update soon
+*/
 
